@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineer Career: Crime Department Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --police-blue: #002366; --warning-blue: #00aaff; --dark: #050a14; --card: #0d1626; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: white; margin: 0; padding: 0; }
+        
+        .hero { padding: 40px 20px; text-align: center; background: linear-gradient(to bottom, #001a4d, var(--dark)); }
+        .hero h1 { font-size: 28px; margin: 0; color: var(--warning-blue); text-transform: uppercase; }
+        .hero p { font-size: 16px; opacity: 0.8; margin-top: 10px; }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; padding-bottom: 160px; }
+
+        .step { position: relative; margin-bottom: 50px; padding: 25px; background: var(--card); border-radius: 12px; border: 1px solid #1e2d45; }
+        .step-num { position: absolute; top: -12px; left: 20px; background: var(--warning-blue); color: #000; padding: 4px 12px; border-radius: 4px; font-weight: 800; font-size: 11px; }
+        
+        .module-info { color: #5c78a3; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .task-title { font-size: 19px; font-weight: 800; margin: 10px 0; color: #fff; }
+        .description { font-size: 14px; line-height: 1.6; color: #b0c4de; }
+        .tech-pill { display: inline-block; background: rgba(0, 170, 255, 0.1); color: var(--warning-blue); padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-top: 12px; border: 1px solid var(--warning-blue); }
+
+        /* Navigation Buttons Styling */
+        .footer-nav { 
+            position: fixed; bottom: 0; width: 100%; background: rgba(5, 10, 20, 0.95); 
+            padding: 20px; text-align: center; border-top: 1px solid #1e2d45;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            z-index: 1000;
+        }
+
+        .btn-next { 
+            background: var(--warning-blue); color: #000; padding: 18px; 
+            border-radius: 8px; text-decoration: none; font-weight: 800; 
+            display: inline-block; width: 90%; max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 170, 255, 0.4);
+        }
+
+        .btn-back { 
+            color: #5c78a3; text-decoration: none; font-size: 14px; 
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>AI in Crime Control</h1>
+        <p>Using Data Science to Build a <b>Safer World</b></p>
+    </div>
+
+    <div class="container">
+
+        <div class="step">
+            <div class="step-num">STEP 01</div>
+            <div class="module-info">Module 1-2: Python & Data Logic</div>
+            <div class="task-title">Digital Evidence Cleanup</div>
+            <p class="description">Crime departments handle massive logs of phone records, CCTV timestamps, and location data. You use <b>Python</b> to filter and organize thousands of "messy" records into a clear timeline for investigators.</p>
+            <div class="tech-pill">Skill: Forensic Data Processing</div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">STEP 02</div>
+            <div class="module-info">Module 4: Statistics & Analysis</div>
+            <div class="task-title">Mapping Crime Hotspots</div>
+            <p class="description">Where is a crime likely to happen next? You use <b>Statistics</b> to analyze historical data and identify high-risk zones in the city at specific times of the day.</p>
+            <div class="tech-pill">Skill: Predictive Policing</div>
+        </div>
+
+        
+
+        <div class="step">
+            <div class="step-num">STEP 03</div>
+            <div class="module-info">Module 7: Deep Learning & Computer Vision</div>
+            <div class="task-title">Face & License Plate Recognition</div>
+            <p class="description">You build <b>Neural Networks</b> that automatically scan CCTV footage to identify a suspect’s face or a vehicle’s license plate even in low light.</p>
+            <div class="tech-pill">Skill: Visual Intelligence</div>
+        </div>
+
+        
+
+        <div class="step">
+            <div class="step-num">STEP 04</div>
+            <div class="module-info">Module 8: Natural Language Processing (NLP)</div>
+            <div class="task-title">Scanning Cyber Threats</div>
+            <p class="description">Criminals often use coded language. You use <b>NLP</b> to scan millions of online chats or emails to detect suspicious keywords and prevent cyber-crimes before they occur.</p>
+            <div class="tech-pill">Skill: Cyber Threat Intelligence</div>
+        </div>
+
+        <div class="step" style="border-color: var(--warning-blue);">
+            <div class="step-num">FINAL</div>
+            <div class="module-info">Module 10: AI Deployment</div>
+            <div class="task-title">Live 24/7 Security Monitoring</div>
+            <p class="description">You deploy these AI models on secure **Cloud Servers** to provide the police force with real-time alerts and live tracking dashboards.</p>
+            <div class="tech-pill">Skill: Real-Time AI Ops</div>
+        </div>
+
+    </div>
+
+    <div class="footer-nav">
+        <a href="internship-entry.html" class="btn-next">Part 2 : Internship phase →</a>
+        <a href="example-selection.html" class="btn-back">← Back to Industry Selection</a>
+    </div>
+
+</body>
+</html>

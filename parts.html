@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Map</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Container adjustment for mobile */
+        .container { 
+            padding: 20px 15px; /* ಮೊದಲು 60px ಇತ್ತು, ಈಗ 20px ಮಾಡಿದ್ದೇನೆ */
+            max-width: 500px; 
+            margin: 0 auto; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 15px; /* ಪೇಜ್ ಮೇಲೆ ಬರದಂತೆ ಕೆಳಗೆ ಸ್ವಲ್ಪ ಜಾಗ */
+            background: #f0f4f8;
+            color: #555;
+            padding: 6px 12px;
+            border-radius: 10px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 600;
+            align-self: flex-start; /* ಬಟನ್ ಎಡಭಾಗಕ್ಕೆ ಇರಲಿ */
+        }
+
+        /* Journey Part Cards */
+        .part-card {
+            background: #fff;
+            border: 2px dashed #007bff;
+            padding: 20px 15px; /* ಮೊಬೈಲ್‌ಗಾಗಿ ಪ್ಯಾಡಿಂಗ್ ಕಡಿಮೆ ಮಾಡಲಾಗಿದೆ */
+            border-radius: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent; /* ಟ್ಯಾಪ್ ಮಾಡಿದಾಗ ಬ್ಲೂ ಬಾಕ್ಸ್ ಬರದಂತೆ */
+        }
+
+        /* Initial state: Hidden/Blur */
+        .part-content {
+            opacity: 0.1;
+            filter: blur(5px);
+            transition: 0.4s;
+        }
+
+        .part-title {
+            color: #007bff;
+            font-weight: 800;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        /* Hover & Active Reveal Logic */
+        .part-card:hover, .part-card:active {
+            border-style: solid;
+            background: #f8fbff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,123,255,0.1);
+        }
+
+        .part-card:hover .part-content, .part-card:active .part-content {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .tap-hint {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        /* Header adjust */
+        .step-indicator {
+            text-align: right; 
+            color: #007bff; 
+            font-weight: bold; 
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="focus.html" class="back-btn">← Back</a>
+
+        <div class="step-indicator">Step 4/10</div>
+        
+        <div class="main-content">
+            <h1 style="font-size: 24px; margin: 0 0 5px 0;">The 10-Month Strategy</h1>
+            <p class="tap-hint">Tap to reveal each phase</p>
+            
+            <div class="part-card" onclick="location.href='theory.html'">
+                <div class="part-title">PART 1: Learning Phase</div>
+                <div class="part-content">
+                    <p style="color: #444; font-weight: 500; font-size: 14px; margin: 5px 0;">5 Months of Intensive Training with 20+ Assignments.</p>
+                    <small style="color: #007bff; font-weight: 700;">Click to explore →</small>
+                </div>
+            </div>
+
+            <div class="part-card" onclick="location.href='internship-entry.html'">
+                <div class="part-title">PART 2: Career Phase</div>
+                <div class="part-content">
+                    <p style="color: #444; font-weight: 500; font-size: 14px; margin: 5px 0;">5 Months of Internship, Projects & Portfolio Building.</p>
+                    <small style="color: #007bff; font-weight: 700;">Click to explore →</small>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 12px; color: #888; margin-top: 15px;">
+            Choose a phase to see the detailed breakdown.
+        </p>
+    </div>
+
+<script>
+    window.onload = function() {
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxumEXj46lNby4y8Of9N7-3RHMG5htEBfOsSKiGeYlxh4IhtTJo_kEtyNKAAnDWizkjPA/exec';
+        const name = localStorage.getItem('leadName') || "Unknown Visitor";
+        const mobile = localStorage.getItem('leadMobile') || "No Mobile";
+        const pageName = "STRATEGY_MAP_PAGE"; // ಹಳೆಯ ಹೆಸರನ್ನು ಸ್ವಲ್ಪ ಚಿಕ್ಕದು ಮಾಡಿದ್ದೇನೆ
+
+        fetch(scriptURL + `?name=${encodeURIComponent(name)}&mobile=${mobile}&status=VISITED_${pageName}`, {
+            method: 'GET',
+            mode: 'no-cors'
+        })
+        .catch(err => console.log("Tracking error: ", err));
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Engineer Career: YouTube Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --yt-red: #FF0000; --dark: #0f0f0f; --card: #1e1e1e; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: white; margin: 0; padding: 0; }
+        
+        .hero { padding: 40px 20px; text-align: center; background: linear-gradient(to bottom, #2c0000, var(--dark)); }
+        .hero h1 { font-size: 28px; margin: 0; color: var(--yt-red); }
+        .hero p { font-size: 16px; opacity: 0.8; margin-top: 10px; }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 20px; padding-bottom: 160px; }
+
+        .step { position: relative; margin-bottom: 50px; padding: 20px; background: var(--card); border-radius: 20px; border: 1px solid #333; }
+        .step-num { position: absolute; top: -15px; left: 20px; background: var(--yt-red); color: white; padding: 5px 15px; border-radius: 10px; font-weight: 800; font-size: 12px; }
+        
+        .module-info { color: #aaa; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .task-title { font-size: 19px; font-weight: 800; margin: 10px 0; color: #fff; }
+        .description { font-size: 14px; line-height: 1.6; color: #ddd; }
+        .tech-pill { display: inline-block; background: #333; color: var(--yt-red); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700; margin-top: 10px; }
+
+        /* Navigation Buttons Styling */
+        .footer-nav { 
+            position: fixed; bottom: 0; width: 100%; background: #000; 
+            padding: 20px; text-align: center; border-top: 1px solid #222;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+
+        .btn-next { 
+            background: var(--yt-red); color: white; padding: 18px; 
+            border-radius: 15px; text-decoration: none; font-weight: 800; 
+            display: inline-block; width: 90%; max-width: 400px;
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        .btn-back { 
+            color: #888; text-decoration: none; font-size: 14px; 
+            font-weight: 700; transition: 0.3s;
+        }
+        .btn-back:hover { color: #fff; }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>What does an AI Engineer do?</h1>
+        <p>A Real-Life Journey at <b>YouTube</b></p>
+    </div>
+
+    <div class="container">
+
+        <div class="step">
+            <div class="step-num">STEP 01</div>
+            <div class="module-info">Module 1 & 2: Python Foundation</div>
+            <div class="task-title">Cleaning Messy Data</div>
+            <p class="description">YouTube gets 500 hours of video every minute. You use <b>Python</b> to organize titles and remove fake views so the data is clean.</p>
+            <div class="tech-pill">Skill: Data Cleaning</div>
+        </div>
+
+        
+
+        <div class="step">
+            <div class="step-num">STEP 02</div>
+            <div class="module-info">Module 4: Statistics</div>
+            <div class="task-title">Finding What's Viral</div>
+            <p class="description">You use <b>Statistics</b> to study patterns. You find out why people click on certain videos more than others.</p>
+            <div class="tech-pill">Skill: Trend Prediction</div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">STEP 03</div>
+            <div class="module-info">Module 5-6: Machine Learning</div>
+            <div class="task-title">The Recommendation Engine</div>
+            <p class="description">You build <b>Machine Learning</b> models that "suggest" the next video based on what a user likes.</p>
+            <div class="tech-pill">Skill: Smart Suggestions</div>
+        </div>
+
+        
+
+        <div class="step">
+            <div class="step-num">STEP 04</div>
+            <div class="module-info">Module 8: Natural Language AI</div>
+            <div class="task-title">Understanding Language</div>
+            <p class="description">Using <b>NLP</b>, you create automatic captions and translate videos into different languages for global users.</p>
+            <div class="tech-pill">Skill: Language Processing</div>
+        </div>
+
+        <div class="step" style="border-color: var(--yt-red);">
+            <div class="step-num">FINAL</div>
+            <div class="module-info">Module 10: AI Deployment</div>
+            <div class="task-title">Launching to 2 Billion People</div>
+            <p class="description">You use <b>Cloud Tools</b> to make sure your AI runs smoothly for everyone in the world at once.</p>
+            <div class="tech-pill">Skill: Global Scaling</div>
+        </div>
+
+    </div>
+
+    <div class="footer-nav">
+        <a href="example2.html" class="btn-next">Next Example →</a>
+        <a href="example-selection.html" class="btn-back">← Back to Industry Selection</a>
+    </div>
+
+</body>
+</html>

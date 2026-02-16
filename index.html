@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datamites Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modern Data Icon Design */
+        .data-icon {
+            width: 80px;
+            height: 80px;
+            background: #007bff;
+            border-radius: 20px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(0,123,255,0.3);
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .container {
+            justify-content: center; /* Center alignment for middle area */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-nav" style="text-align: right; color: #007bff; font-weight: bold; font-size: 14px;">
+            Step 1/10
+        </div>
+
+        <div class="main-content">
+            <div class="data-icon">D</div>
+            
+            <h1 style="font-size: 28px; color: #222; margin-bottom: 10px;">Become a Certified <br><span style="color: #007bff;">Artificial Intelligence Engineer</span></h1>
+            <p style="color: #666; font-size: 16px;">A journey from zero to someone.</p>
+          <p style="color: #666; font-size: 16px;">Anybody <strong>Can</strong> Do!</p>
+        </div>
+
+        <div class="footer-action" style="margin-top: 40px;">
+            <a href="name.html" class="btn" style="display: block; width: 100%; text-decoration: none; text-align: center;">Start the Journey</a>
+        </div>
+    </div>
+
+<script>
+    window.onload = function() {
+        // ನಿನ್ನ ಲೈವ್ ಗೂಗಲ್ ಸ್ಕ್ರಿಪ್ಟ್ ಲಿಂಕ್
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxumEXj46lNby4y8Of9N7-3RHMG5htEBfOsSKiGeYlxh4IhtTJo_kEtyNKAAnDWizkjPA/exec';
+        
+        // ಲೋಕಲ್ ಸ್ಟೋರೇಜ್‌ನಿಂದ ಡೇಟಾ ಪಡೆಯುವುದು
+        const name = localStorage.getItem('leadName') || "Unknown Visitor";
+        const mobile = localStorage.getItem('leadMobile') || "No Mobile";
+        
+        // ಪೇಜ್ ಹೆಸರನ್ನು ಇಲ್ಲಿ ಬದಲಾಯಿಸು (ಪ್ರತಿ ಫೈಲ್‌ಗೆ ಬೇರೆ ಬೇರೆ ಹೆಸರಿರಲಿ)
+        const pageName = "ENTRY AAGIDARE"; 
+
+        // ಟ್ರ್ಯಾಕಿಂಗ್ ಡೇಟಾವನ್ನು ಗೂಗಲ್ ಶೀಟ್‌ಗೆ ಕಳುಹಿಸುವುದು
+        fetch(scriptURL + `?name=${encodeURIComponent(name)}&mobile=${mobile}&status=VISITED_${pageName}`, {
+            method: 'GET',
+            mode: 'no-cors'
+        })
+        .then(() => console.log("User tracking updated for: " + pageName))
+        .catch(err => console.log("Tracking error: ", err));
+    };
+function saveUserDetails() {
+    const name = document.getElementById('nameInput').value;
+    const mobile = document.getElementById('mobileInput').value;
+    
+    // This 'saves' it so other pages can see it
+    localStorage.setItem('leadName', name);
+    localStorage.setItem('leadMobile', mobile);
+    
+    window.location.href = "next-page.html"; // Moves to the next page
+}
+</script>
+
+</body>
+</html>

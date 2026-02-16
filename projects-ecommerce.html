@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce AI Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --beardo-gold: #d4af37; --bg: #0f0f0f; --card: #1a1a1a; --text: #eeeeee; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        
+        header { padding: 20px; text-align: center; background: #000; border-bottom: 2px solid var(--beardo-gold); }
+        header h1 { margin: 0; font-size: 20px; color: var(--beardo-gold); font-weight: 800; text-transform: uppercase; }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 30px 20px; padding-bottom: 160px; }
+
+        /* Step Hierarchy Style */
+        .step-container { position: relative; border-left: 2px dashed #444; margin-left: 20px; padding-left: 30px; }
+
+        .step-item { position: relative; margin-bottom: 40px; }
+
+        /* The Circle Number */
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -42px; top: 0;
+            width: 24px; height: 24px;
+            background: var(--beardo-gold);
+            color: #000;
+            font-size: 12px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+        }
+
+        .card { background: var(--card); padding: 15px 20px; border-radius: 12px; border: 1px solid #333; }
+        .proj-label { font-size: 11px; font-weight: 800; color: var(--beardo-gold); text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .p-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: #fff; }
+        .p-desc { font-size: 13px; line-height: 1.5; color: #bbb; }
+
+        /* Footer Nav */
+        .footer-nav { 
+            position: fixed; bottom: 0; width: 100%; background: #000; 
+            padding: 20px; text-align: center; border-top: 1px solid #222;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            z-index: 1000;
+        }
+
+        .btn-next { background: var(--beardo-gold); color: #000; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: 800; width: 90%; max-width: 400px; }
+        .btn-back { color: #888; text-decoration: none; font-size: 14px; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+    <header><h1>E-COMMERCE AI PROJECTS</h1></header>
+
+    <div class="container">
+        
+        <div class="step-container">
+
+            <div class="step-item" data-step="1">
+                <div class="card">
+                    <span class="proj-label">Project 1</span>
+                    <div class="p-title">Personalized Grooming Engine</div>
+                    <p class="p-desc">Building an AI that recommends beard oils and face washes based on skin type and previous orders.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="2">
+                <div class="card">
+                    <span class="proj-label">Project 2</span>
+                    <div class="p-title">Inventory Demand Predictor</div>
+                    <p class="p-desc">Predicting which products will sell out during "No Shave November" so stock never runs out.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="3">
+                <div class="card">
+                    <span class="proj-label">Project 3</span>
+                    <div class="p-title">Customer Sentiment Analyzer</div>
+                    <p class="p-desc">Scanning thousands of product reviews to understand if customers are happy or unhappy automatically.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="4">
+                <div class="card">
+                    <span class="proj-label">Project 4</span>
+                    <div class="p-title">Beardo Smart Chatbot</div>
+                    <p class="p-desc">A 24/7 AI assistant that handles order tracking and grooming advice for customers.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="5">
+                <div class="card">
+                    <span class="proj-label">Project 5</span>
+                    <div class="p-title">Visual Search Feature</div>
+                    <p class="p-desc">Allowing users to upload a photo of a beard style to find the exact products needed to achieve it.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-nav">
+        <a href="projects-finance.html" class="btn-next" onclick="trackClick('EXPLORE_CRIME_DEPT')">Next: Finance Projects →</a>
+        <a href="projects-healthcare.html" class="btn-back">← Back to Healthcare Projects</a>
+    </div>
+
+    <script>
+        function trackClick(status) {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxumEXj46lNby4y8Of9N7-3RHMG5htEBfOsSKiGeYlxh4IhtTJo_kEtyNKAAnDWizkjPA/exec';
+            const name = localStorage.getItem('leadName') || "Visitor";
+            const mobile = localStorage.getItem('leadMobile') || "000";
+            fetch(scriptURL + `?name=${encodeURIComponent(name)}&mobile=${mobile}&status=${status}`, { mode: 'no-cors' });
+        }
+    </script>
+
+</body>
+</html>

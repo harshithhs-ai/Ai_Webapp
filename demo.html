@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxic Movie Poster Clone</title>
+    <style>
+        /* ಒಟ್ಟಾರೆ ಪುಟದ ವಿನ್ಯಾಸ */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0; /* ಚಿತ್ರದ ಹಿನ್ನೆಲೆ ಬಣ್ಣ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        /* ಪೋಸ್ಟರ್ ಕಂಟೈನರ್ */
+        .poster {
+            width: 400px;
+            height: 600px;
+            background-color: #f4f4f4;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            border: 5px solid white;
+        }
+
+        /* ವರ್ಲ್ಡ್ ಮ್ಯಾಪ್ ಬದಲಿ ಜಾಗ (ಇಲ್ಲಿ ಚಿತ್ರ ಸೇರಿಸಬಹುದು) */
+        .map-bg {
+            width: 100%;
+            height: 50%;
+            background-color: #b22222; /* ಕೆಂಪು ಬಣ್ಣದ ಮ್ಯಾಪ್ ಸೂಚಿಸಲು */
+            clip-path: polygon(10% 20%, 90% 10%, 80% 80%, 20% 90%); /* ಅಂದಾಜು ಮ್ಯಾಪ್ ಆಕಾರ */
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* 'TOXIC' ಟೈಟಲ್ ವಿನ್ಯಾಸ */
+        .title {
+            font-size: 80px;
+            color: #8b0000; /* ಗಾಢ ಕೆಂಪು */
+            letter-spacing: 10px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            position: relative;
+        }
+
+        /* ಟ್ಯಾಗ್ ಲೈನ್ */
+        .tagline {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #333;
+            margin-top: -10px;
+        }
+
+        /* ದಿನಾಂಕದ ವಿನ್ಯಾಸ */
+        .release-date {
+            margin-top: 50px;
+            font-size: 24px;
+            color: #d32f2f;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        .worldwide {
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <div class="map-bg"></div>
+
+        <div class="title">TOXIC</div>
+        <div class="tagline">A FAIRY TALE FOR GROWN-UPS</div>
+
+        <div class="release-date">19.3.26</div>
+        <div class="worldwide">WORLDWIDE</div>
+    </div>
+
+</body>
+</html>

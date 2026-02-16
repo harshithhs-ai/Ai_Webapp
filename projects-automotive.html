@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile AI Projects | Toyota Case Study</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --toyota-red: #eb0a1e; --dark: #1a1a1a; --bg: #f5f5f5; --text: #333; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        
+        header { padding: 20px; text-align: center; background: white; border-bottom: 4px solid var(--toyota-red); }
+        header h1 { margin: 0; font-size: 20px; color: var(--toyota-red); font-weight: 800; text-transform: uppercase; }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 30px 20px; padding-bottom: 160px; }
+
+        /* Step Hierarchy Style */
+        .step-container { position: relative; border-left: 2px dashed #ccc; margin-left: 20px; padding-left: 30px; }
+
+        .step-item { position: relative; margin-bottom: 40px; }
+
+        /* The Circle Number */
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -42px; top: 0;
+            width: 24px; height: 24px;
+            background: var(--toyota-red);
+            color: #fff;
+            font-size: 12px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(235, 10, 30, 0.3);
+        }
+
+        .card { background: #fff; padding: 15px 20px; border-radius: 12px; border: 1px solid #eee; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .proj-label { font-size: 11px; font-weight: 800; color: var(--toyota-red); text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .p-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: var(--dark); }
+        .p-desc { font-size: 13px; line-height: 1.5; color: #555; }
+
+        /* Footer Nav */
+        .footer-nav { 
+            position: fixed; bottom: 0; width: 100%; background: #fff; 
+            padding: 20px; text-align: center; border-top: 1px solid #eee;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            z-index: 1000;
+        }
+
+        .btn-next { background: var(--toyota-red); color: #fff; padding: 16px; border-radius: 8px; text-decoration: none; font-weight: 800; width: 90%; max-width: 400px; }
+        .btn-back { color: #888; text-decoration: none; font-size: 14px; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+    <header><h1>AUTOMOBILE AI PROJECTS</h1></header>
+
+    <div class="container">
+        
+        <div class="step-container">
+
+            <div class="step-item" data-step="1">
+                <div class="card">
+                    <span class="proj-label">Project 1</span>
+                    <div class="p-title">Self-Driving Lane Assistant</div>
+                    <p class="p-desc">Building a computer vision model that identifies road lanes and keeps the car centered automatically.</p>
+                </div>
+            </div>
+
+            
+
+            <div class="step-item" data-step="2">
+                <div class="card">
+                    <span class="proj-label">Project 2</span>
+                    <div class="p-title">Predictive Maintenance AI</div>
+                    <p class="p-desc">Using sensor data to predict when a car part (like engine or brakes) might fail before it actually happens.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="3">
+                <div class="card">
+                    <span class="proj-label">Project 3</span>
+                    <div class="p-title">Object & Pedestrian Detection</div>
+                    <p class="p-desc">Training AI to recognize humans, cycles, and other cars on the road to apply emergency brakes instantly.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="4">
+                <div class="card">
+                    <span class="proj-label">Project 4</span>
+                    <div class="p-title">Smart Factory Quality Control</div>
+                    <p class="p-desc">AI cameras in the Toyota factory that automatically detect paint scratches or manufacturing defects on cars.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="5">
+                <div class="card">
+                    <span class="proj-label">Project 5</span>
+                    <div class="p-title">Voice Controlled Car Assistant</div>
+                    <p class="p-desc">Developing a smart NLP system so drivers can control AC, Music, and Navigation using natural voice commands.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+s
+    <div class="footer-nav">
+        <a href="placement-team.html" class="btn-next" onclick="trackClick('EXPLORE_ROADMAP_AUTO')">View Placement Assistence process →</a>
+        <a href="projects-gallery.html" class="btn-back">← Back to Logistics Projects</a>
+    </div>
+
+    <script>
+        function trackClick(status) {
+            const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+            const name = localStorage.getItem('leadName') || "Visitor";
+            const mobile = localStorage.getItem('leadMobile') || "000";
+            fetch(scriptURL + `?name=${encodeURIComponent(name)}&mobile=${mobile}&status=${status}`, { mode: 'no-cors' });
+        }
+    </script>
+
+</body>
+</html>

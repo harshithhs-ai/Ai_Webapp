@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare AI Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --med-blue: #007bff; --bg: #f4f7fe; --text: #1e293b; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
+        
+        header { padding: 20px; text-align: center; background: white; border-bottom: 2px solid var(--med-blue); }
+        header h1 { margin: 0; font-size: 20px; color: var(--med-blue); font-weight: 800; }
+
+        .container { max-width: 500px; margin: 0 auto; padding: 30px 20px; padding-bottom: 160px; }
+
+        /* Step Hierarchy Style */
+        .step-container { position: relative; border-left: 2px dashed #cbd5e1; margin-left: 20px; padding-left: 30px; }
+
+        .step-item { position: relative; margin-bottom: 40px; }
+
+        /* The Circle Number */
+        .step-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -42px; top: 0;
+            width: 24px; height: 24px;
+            background: var(--med-blue);
+            color: white;
+            font-size: 12px; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+        }
+
+        .card { background: white; padding: 15px 20px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .mod-tag { font-size: 10px; font-weight: 800; color: #64748b; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .p-title { font-size: 17px; font-weight: 800; margin-bottom: 8px; color: #0f172a; }
+        .p-desc { font-size: 13px; line-height: 1.5; color: #475569; }
+
+        /* Footer Nav */
+        .footer-nav { 
+            position: fixed; bottom: 0; width: 100%; background: white; 
+            padding: 20px; text-align: center; border-top: 1px solid #e2e8f0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            z-index: 1000;
+        }
+
+        .btn-next { background: var(--med-blue); color: white; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: 800; width: 90%; max-width: 400px; }
+        .btn-back { color: #64748b; text-decoration: none; font-size: 14px; font-weight: 700; }
+    </style>
+</head>
+<body>
+
+    <header><h1>HEALTHCARE PROJECTS</h1></header>
+
+    <div class="container">
+        
+        <div class="step-container">
+
+            <div class="step-item" data-step="1">
+                <div class="card">
+                    <span class="mod-tag">Project 1: Deep Learning</span>
+                    <div class="p-title">X-Ray Pneumonia Detection</div>
+                    <p class="p-desc">Detecting lung infections automatically using Deep Learning models.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="2">
+                <div class="card">
+                    <span class="mod-tag">Project 2: Machine Learning</span>
+                    <div class="p-title">Diabetes Risk Predictor</div>
+                    <p class="p-desc">Predicting if a patient is at risk of diabetes using historical health data.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="3">
+                <div class="card">
+                    <span class="mod-tag">Project 3: NLP</span>
+                    <div class="p-title">AI Medical Assistant</div>
+                    <p class="p-desc">A chatbot that understands symptoms and suggests the right doctors.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="4">
+                <div class="card">
+                    <span class="mod-tag">Project 4: Autoencoders</span>
+                    <div class="p-title">Brain Tumor Anomaly</div>
+                    <p class="p-desc">Finding rare patterns in brain MRI scans that human eyes might miss.</p>
+                </div>
+            </div>
+
+            <div class="step-item" data-step="5">
+                <div class="card">
+                    <span class="mod-tag">Project 5: MLOps</span>
+                    <div class="p-title">Emergency Bed Tracker</div>
+                    <p class="p-desc">Live AI system to predict and manage hospital bed availability.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-nav">
+        <a href="projects-ecommerce.html" class="btn-next" onclick="trackClick('EXPLORE_ECOMMERCE')">Next: E-commerce Projects →</a>
+        <a href="internship-details.html" class="btn-back">← Back to Internship Details</a>
+    </div>
+
+    <script>
+        function trackClick(status) {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxumEXj46lNby4y8Of9N7-3RHMG5htEBfOsSKiGeYlxh4IhtTJo_kEtyNKAAnDWizkjPA/exec';
+            const name = localStorage.getItem('leadName') || "Visitor";
+            const mobile = localStorage.getItem('leadMobile') || "000";
+            fetch(scriptURL + `?name=${encodeURIComponent(name)}&mobile=${mobile}&status=${status}`, { mode: 'no-cors' });
+        }
+    </script>
+
+</body>
+</html>
